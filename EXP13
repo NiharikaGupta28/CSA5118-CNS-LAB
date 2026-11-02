@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    int p[2][2]={{1,0},{0,1}};
+    int c[2][2]={{9,4},{5,7}};
+    int i,j;
+
+    printf("Plaintext matrix:\n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+            printf("%d ",p[i][j]);
+        printf("\n");
+    }
+
+    printf("Recovered key:\n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+            printf("%d ",c[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
