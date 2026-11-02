@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+    long long n=1;
+    int i;
+
+    for(i=1;i<=25;i++)
+        n=n*i;
+
+    printf("Keys: %lld",n);
+    return 0;
+}
