@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+    char s[]="hello";
+    int a=5,b=8,i;
+
+    for(i=0;s[i];i++)
+        s[i]=(a*(s[i]-'a')+b)%26+'a';
+
+    printf("Cipher: %s",s);
+    return 0;
+}
