@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    char s[]="hello";
+    char key[]="key";
+    int i;
+
+    for(i=0;s[i];i++)
+        s[i]=(s[i]-'a'+key[i%3]-'a')%26+'a';
+
+    printf("Cipher: %s",s);
+    return 0;
+}
