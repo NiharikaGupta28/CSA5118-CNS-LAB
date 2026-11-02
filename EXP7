@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    char s[]="hello";
+    char key[]="qwertyuiopasdfghjklzxcvbnm";
+    char rev[]="abcdefghijklmnopqrstuvwxyz";
+    int i,j;
+
+    for(i=0;s[i];i++)
+        s[i]=key[s[i]-'a'];
+
+    printf("Cipher: %s\n",s);
+
+    for(i=0;s[i];i++)
+    {
+        for(j=0;j<26;j++)
+        {
+            if(key[j]==s[i])
+            {
+                s[i]=rev[j];
+                break;
+            }
+        }
+    }
+
+    printf("Plain: %s",s);
+    return 0;
+}
