@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+    char s[]="abbccc";
+    int f[26]={0},i;
+
+    for(i=0;s[i];i++)
+        f[s[i]-'a']++;
+
+    for(i=0;i<26;i++)
+        if(f[i]>0)
+            printf("%c = %d\n",i+'a',f[i]);
+
+    return 0;
+}
