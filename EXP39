@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    char s[]="khoor";
+    int k,i;
+
+    for(k=0;k<26;k++)
+    {
+        printf("Key %d: ",k);
+
+        for(i=0;s[i];i++)
+            printf("%c",(s[i]-'a'-k+26)%26+'a');
+
+        printf("\n");
+    }
+
+    return 0;
+}
