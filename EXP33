@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    unsigned long long plaintext = 123456789;
+    unsigned long long key = 1234567;
+
+    printf("Plaintext block = %llu\n", plaintext);
+    printf("Effective key length = 56 bits\n");
+    printf("Block size = 64 bits\n");
+    printf("DES rounds = 16");
+
+    return 0;
+}
