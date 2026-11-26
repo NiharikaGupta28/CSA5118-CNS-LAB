@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    char message[] = "101";
+    int block = 8, i;
+
+    printf("Original: %s\n", message);
+    printf("Padded: %s", message);
+
+    printf("1");
+    for(i = 0; i < block - 4; i++)
+        printf("0");
+
+    return 0;
+}
