@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "khoor";
+    char freq[] = "etaoinshrdlcumwfgypbvkjxqz";
+    int count[26] = {0}, i, j, max;
+    char result[100];
+
+    for(i = 0; s[i]; i++)
+        if(s[i] >= 'a' && s[i] <= 'z')
+            count[s[i] - 'a']++;
+
+    for(i = 0; i < 26; i++) {
+        max = 0;
+        for(j = 1; j < 26; j++)
+            if(count[j] > count[max]) max = j;
+
+        if(count[max] > 0) {
+            for(j = 0; s[j]; j++)
+                if(s[j] == max + 'a')
+                    result[j] = freq[i];
+            count[max] = 0;
+        }
+    }
+
+    result[strlen(s)] = '\0';
+    printf("Possible plaintext: %s", result);
+    return 0;
+}
