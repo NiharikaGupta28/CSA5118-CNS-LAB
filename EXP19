@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int p[] = {10, 20, 30}, c[3];
+    int iv = 5, key = 7;
+
+    for(int i = 0; i < 3; i++) {
+        c[i] = (p[i] ^ iv) ^ key;
+        iv = c[i];
+    }
+
+    printf("Ciphertext: ");
+    for(int i = 0; i < 3; i++)
+        printf("%d ", c[i]);
+
+    return 0;
+}
