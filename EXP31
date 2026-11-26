@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdint.h>
+
+int main() {
+    uint64_t L = 0x123456789ABCDEF0;
+    uint64_t K1, K2;
+
+    K1 = L << 1;
+    if(L >> 63) K1 ^= 0x1B;
+
+    K2 = K1 << 1;
+    if(K1 >> 63) K2 ^= 0x1B;
+
+    printf("K1 = %llX\n", (unsigned long long)K1);
+    printf("K2 = %llX", (unsigned long long)K2);
+
+    return 0;
+}
