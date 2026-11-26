@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int p[] = {1, 2, 4}, c[3], d[3];
+    int key, i;
+
+    for(i = 0; i < 3; i++) {
+        key = (5 * i + 7) % 256;
+        c[i] = p[i] ^ key;
+        d[i] = c[i] ^ key;
+    }
+
+    printf("Ciphertext: ");
+    for(i = 0; i < 3; i++) printf("%d ", c[i]);
+
+    printf("\nDecrypted: ");
+    for(i = 0; i < 3; i++) printf("%d ", d[i]);
+
+    return 0;
+}
