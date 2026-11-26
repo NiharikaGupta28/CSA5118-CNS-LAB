@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char data[] = "10101010";
+    int i;
+
+    printf("Original: %s\n", data);
+    printf("Padded:   %s", data);
+
+    for(i = 0; i < 8; i++)
+        printf("%d", i == 0 ? 1 : 0);
+
+    return 0;
+}
