@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int message = 10;
+    int k1 = 5, k2 = 8;
+
+    int dsa1 = (message * k1) % 23;
+    int dsa2 = (message * k2) % 23;
+
+    printf("DSA signature 1 = %d\n", dsa1);
+    printf("DSA signature 2 = %d\n", dsa2);
+    printf("RSA signatures for same message are identical.");
+
+    return 0;
+}
