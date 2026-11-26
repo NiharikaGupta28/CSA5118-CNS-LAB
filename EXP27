@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int e = 3, n = 55, i, c, x;
+
+    for(i = 0; i < 26; i++) {
+        x = (i * i * i) % n;
+        c = x;
+        printf("%c = %d\n", 'A' + i, c);
+    }
+
+    return 0;
+}
