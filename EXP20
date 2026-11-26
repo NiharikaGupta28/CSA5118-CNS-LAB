@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    printf("ECB: Only the corresponding plaintext block is affected.\n");
+    printf("CBC: An error in C1 affects P1 and P2.\n");
+    printf("Blocks after P2: Not affected.\n");
+    return 0;
+}
