@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    printf("Bob's private key is leaked.\n");
+    printf("Changing e and d but keeping n is unsafe.\n");
+    printf("Bob must generate a new modulus n.");
+    return 0;
+}
