@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int n = 15, m = 6, a = n, b = m, r;
+
+    while(b != 0) {
+        r = a % b;
+        a = b;
+        b = r;
+    }
+
+    printf("GCD = %d\n", a);
+
+    if(a > 1 && a < n)
+        printf("Factor found: %d", a);
+    else
+        printf("No factor found");
+
+    return 0;
+}
