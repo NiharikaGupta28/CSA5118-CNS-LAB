@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    char left[] = "1010101010101010101010101010";
+    char right[] = "0101010101010101010101010101";
+
+    printf("First 24 bits: ");
+    for(int i = 0; i < 24; i++)
+        printf("%c", left[i]);
+
+    printf("\nSecond 24 bits: ");
+    for(int i = 0; i < 24; i++)
+        printf("%c", right[i]);
+
+    return 0;
+}
